@@ -1,0 +1,2 @@
+Bigmath increases the render size of latex, for some reason it was smaller than regular text before these changes
+Dark pdf and flexoki dark print work together with the "better pdf print" plugin to enable my vault's rendered styles on PDF exports
