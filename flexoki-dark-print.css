@@ -1,0 +1,142 @@
+/*
+ * Flexoki Dark Print Mode
+ *
+ * This snippet ensures that Flexoki's dark theme variables and styles
+ * are correctly applied when exporting a note to PDF.
+ * Use with the "Better Export PDF" plugin for best results.
+ */
+@media print {
+  /* Force a dark background on the main content wrapper */
+  html,
+  body,
+  .app-container,
+  .markdown-preview-view,
+  .markdown-preview-section,
+  .mod-root {
+    background-color: #100f0f !important;
+  }
+
+  /* Ensure the entire page area is covered */
+  html {
+    min-height: 100vh !important;
+  }
+
+  body {
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+@media print {
+  /* Set page background to a reliable dark color */
+  @page {
+    background-color: #101010 !important; /* A solid dark gray */
+    margin: 0 !important;
+  }
+
+  /* Apply to the document body and content */
+  body,
+  .markdown-preview-view {
+    background-color: #101010 !important;
+    color: #e0e0e0 !important; /* Light text */
+  }
+
+  /* Flexoki Dark Theme Variables */
+  :root {
+    --color-red-rgb: 209, 77, 65;
+    --color-orange-rgb: 218, 112, 44;
+    --color-yellow-rgb: 208, 162, 21;
+    --color-green-rgb: 135, 154, 57;
+    --color-cyan-rgb: 58, 169, 159;
+    --color-blue-rgb: 67, 133, 190;
+    --color-purple-rgb: 139, 126, 200;
+    --color-pink-rgb: 206, 93, 151;
+
+    --color-red: #d14d41;
+    --color-orange: #da702c;
+    --color-yellow: #d0a215;
+    --color-green: #879a39;
+    --color-cyan: #3aa99f;
+    --color-blue: #4385be;
+    --color-purple: #8b7ec8;
+    --color-pink: #ce5d97;
+    --color-beige: #be9c52;
+
+    --color-base-00: #100f0f;
+    --color-base-05: #100f0f;
+    --color-base-10: #1c1b1a;
+    --color-base-20: #1c1b1a;
+    --color-base-25: #282726;
+
+    --color-base-30: #282726;
+    --color-base-35: #343331;
+    --color-base-40: #403e3c;
+
+    --color-base-50: #575653;
+    --color-base-60: #6f6e69;
+    --color-base-70: #878580;
+    --color-base-100: #cecdc3;
+
+    /* --h1-color: #ffffff !important; */
+    --h1-color: var(--color-yellow);
+    --h2-color: var(--color-yellow);
+    --h3-color: var(--color-green);
+    --h4-color: var(--color-red);
+    --h5-color: var(--color-purple);
+    --h6-color: var(--color-beige);
+  }
+
+  /* Apply base dark theme styles */
+  body {
+    background-color: var(--color-base-00) !important;
+    color: var(--color-base-100) !important;
+  }
+
+  /* Apply dark theme styles to markdown elements */
+  .markdown-preview-view {
+    background-color: var(--color-base-00) !important;
+    color: var(--color-base-100) !important;
+  }
+
+  /* Apply heading colors for dark theme */
+  .markdown-preview-view h1 {
+    color: #ffffff !important;
+  }
+  .markdown-preview-view h2 {
+    color: var(--h2-color) !important;
+  }
+  .markdown-preview-view h3 {
+    color: var(--h3-color) !important;
+  }
+  .markdown-preview-view h4 {
+    color: var(--h4-color) !important;
+  }
+  .markdown-preview-view h5 {
+    color: var(--h5-color) !important;
+  }
+  .markdown-preview-view h6 {
+    color: var(--h6-color) !important;
+  }
+
+  /* Bold and italic styling for dark theme */
+  strong,
+  .cm-strong {
+    color: var(--color-orange) !important;
+    font-weight: bold !important;
+  }
+
+  em,
+  .cm-em {
+    color: var(--color-orange) !important;
+    font-style: italic !important;
+  }
+
+  /* Block-quote emphasis override */
+  blockquote strong,
+  blockquote em,
+  blockquote li strong,
+  blockquote li em {
+    color: var(--color-orange) !important;
+  }
+}

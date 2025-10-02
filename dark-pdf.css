@@ -1,0 +1,18 @@
+@media print {
+  body {
+    /* Set black background */
+    background-color: #000000 !important;
+    /* Set light text color */
+    color: #e0e0e0 !important;
+  }
+  /* Adjust other elements for dark theme */
+  .markdown-preview-view {
+    background-color: #000000 !important;
+    color: #e0e0e0 !important;
+  }
+
+  .cm-s-obsidian {
+    background-color: #000000 !important;
+    color: #e0e0e0 !important;
+  }
+}
